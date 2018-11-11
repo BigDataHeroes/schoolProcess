@@ -1,3 +1,3 @@
 export scriptHome=/home/vagrant/installProcess/schoolsProcess
-export inputPath=$scriptHome/data/202311-0-colegios-publicos.csv
-export ouPath=$scriptHome/data/colegios-publicos.csv
+export inputPath=/data/schoolsProcess/input.csv
+export ouPath=/data/schoolsProcessP/output.csv

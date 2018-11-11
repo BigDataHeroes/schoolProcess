@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source activate keepcodingFinalProject
 source properties.sh
 
-python colegiosDataset.py $inputPath $ouPath 
+python3.7 colegiosDataset.py $inputPath $ouPath 

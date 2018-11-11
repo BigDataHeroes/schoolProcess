@@ -11,10 +11,10 @@ import pandas as pd
 import sys
 from hdfs3 import HDFileSystem
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 
-hdfs = HDFileSystem(host='sandbox-hdp.hortonworks.com', port=8020)
+hdfs = HDFileSystem(host='bdhKC', port=9000)
 
 inpath=sys.argv[1]
 oupath=sys.argv[2]
@@ -41,7 +41,7 @@ data = df.loc[df['NOMBRE'] != '']
 
 
 # Exportamos dataframe a fichero .csv
-with hdfs.open(oupath) as f:
+with hdfs.open(oupath, 'wb') as f:
     data.to_csv(f, sep=';', encoding='utf-8', index=False)
 
 
